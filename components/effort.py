@@ -25,7 +25,7 @@ df_ictio = pd.concat([df_ictio, df_date_obs, df_date_upload], axis=1)
 
 # BL1 - Use WGS 84 (epsg:4326) as the geographic coordinate system
 
-bl1 = gpd.read_file("BL_ALL/bl_01.shp")
+bl1 = gpd.read_file("BL_All/bl_01.shp")
 bl1 = bl1.to_crs(epsg=4326)
 bl1["rand"] = np.random.randint(1, 100, len(bl1))
 
@@ -47,7 +47,7 @@ fig_bl1.update_layout(mapbox_style="open-street-map",
 #--------------------------------------------------------------------------------------------------------------------------
 
 #BL2 - Use WGS 84 (epsg:4326) as the geographic coordinate system
-bl2 = gpd.read_file("BL_ALL/bl_02.shp")
+bl2 = gpd.read_file("BL_All/bl_02.shp")
 bl2 = bl2.to_crs(epsg=4326)
 bl2["rand"] = np.random.randint(1, 100, len(bl2))
 fig_bl2 = go.Figure(go.Choroplethmapbox(geojson=json.loads(bl2.to_json()), 
@@ -68,7 +68,7 @@ fig_bl2.update_layout(mapbox_style="open-street-map",
 #-------------------------------------------------------------------------------------------------------------------------
 
 # BL3 - Use WGS 84 (epsg:4326) as the geographic coordinate system
-bl3 = gpd.read_file("BL_ALL/bl_03.shp")
+bl3 = gpd.read_file("BL_All/bl_03.shp")
 bl3 = bl3.to_crs(epsg=4326)
 bl3["rand"] = np.random.randint(1, 100, len(bl3))
 fig_bl3 = go.Figure(go.Choroplethmapbox(geojson=json.loads(bl3.to_json()), 
@@ -89,7 +89,7 @@ fig_bl3.update_layout(mapbox_style="open-street-map",
 #-------------------------------------------------------------------------------------------------------------------------
 
 # BL4 - Use WGS 84 (epsg:4326) as the geographic coordinate system
-bl4 = gpd.read_file("BL_ALL/bl_04.shp")
+bl4 = gpd.read_file("BL_All/bl_04.shp")
 bl4 = bl4.to_crs(epsg=4326)
 bl4["rand"] = np.random.randint(1, 100, len(bl4))
 fig_bl4 = go.Figure(go.Choroplethmapbox(geojson=json.loads(bl4.to_json()), 
