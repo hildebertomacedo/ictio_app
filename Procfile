@@ -1,2 +1,1 @@
-worker: Effort.py
-web: gunicorn runserver:app --log-file=-
+web: gunicorn gettingstarted.wsgi
