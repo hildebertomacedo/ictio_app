@@ -1,1 +1,2 @@
-web: python myindex.py runserver 0.0.0.0:5000
+worker: Effort.py
+web: gunicorn runserver:app --log-file=-
